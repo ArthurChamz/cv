@@ -5,7 +5,7 @@ Hi.
 
 This is the code for my professional CV.
 
-It's based on [Xavier Danaux](ctan.org/author/danaux) excellent [moderncv](ctan.org/pkg/moderncv) template, as seen in ShareLatex[sharelatex.com].
+It's based on [Xavier Danaux](ctan.org/author/danaux) excellent [moderncv](ctan.org/pkg/moderncv) template, as seen in [ShareLatex](sharelatex.com).
 
 I've made some addition's of my own, cleaned up the code of things that I'd never use.
 
