@@ -77,8 +77,7 @@
 %\def\document{\endgroup\@endpreamblehook\begingroup\document@original}
 
 % if... then... else... constructs
-\RequirePackage{ifthen}
-% TODO: move to xifthen and \isempty{<arg>} instead of \equal{<arg>}{}
+\RequirePackage{xifthen}
 
 % color
 \RequirePackage{xcolor}
@@ -134,6 +133,7 @@
 
 % graphics
 \RequirePackage{graphicx}
+\graphicspath{{image/}}
 
 % headers and footers
 \RequirePackage{fancyhdr}
@@ -386,21 +386,21 @@
 % makes a generic hyperlink
 % usage: \link[optional text]{link}
 \newcommand*{\link}[2][]{%
-  \ifthenelse{\equal{#1}{}}%
+  \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}%
     {\href{#2}{#1}}}
 
 % makes a http hyperlink
 % usage: \httplink[optional text]{link}
 \newcommand*{\httplink}[2][]{%
-  \ifthenelse{\equal{#1}{}}%
+  \ifthenelse{\isempty{#1}}%
     {\href{http://#2}{#2}}%
     {\href{http://#2}{#1}}}
 
 % makes an email hyperlink
 % usage: \emaillink[optional text]{link}
 \newcommand*{\emaillink}[2][]{%
-  \ifthenelse{\equal{#1}{}}%
+  \ifthenelse{\isempty{#1}}%
     {\href{mailto:#2}{#2}}%
     {\href{mailto:#2}{#1}}}
 
@@ -485,7 +485,7 @@
       \addtolength{\cvcolumnsautowidth}{-#1\cvcolumnsdummywidth}%
       \expandafter\expandafter\expandafter\def\expandafter\csname cvcolumn\roman{cvcolumnscounter}@def\endcsname{p{#1\cvcolumnswidth}}%
       \expandafter\expandafter\expandafter\def\expandafter\csname cvcolumn\roman{cvcolumnscounter}@head\endcsname{\protect\parbox[b]{#1\cvcolumnswidth}{\protect\subsectionstyle{#2}}}}%
-  \ifthenelse{\equal{#2}{}}{}{\@cvcolumns@head@emptyfalse}%
+  \ifthenelse{\isempty{#2}}{}{\@cvcolumns@head@emptyfalse}%
   \expandafter\expandafter\expandafter\def\expandafter\csname cvcolumn\roman{cvcolumnscounter}@content\endcsname{\protect\cvcolumncell{#3}}%
   \stepcounter{cvcolumnscounter}}
 
@@ -557,7 +557,7 @@
 \newcommand*{\closing}[1]{\def\@closing{#1}}
 \newcommand*{\enclosure}[2][]{%
   % if an optional argument is provided, use it to redefine \enclname
-  \ifthenelse{\equal{#1}{}}{}{\renewcommand*{\enclname}{#1}}%
+  \ifthenelse{\isempty{#1}}{}{\renewcommand*{\enclname}{#1}}%
   \def\@enclosure{#2}}
 
 % recompute all letter lengths
@@ -575,6 +575,9 @@
 % usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{}
 
+% insert new skill
+% usage: \newskill
+% TODO: CREATE THE COMMAND WITH OPTIONAL PARAM
 
 \endinput
 
