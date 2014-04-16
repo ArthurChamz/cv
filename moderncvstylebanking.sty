@@ -124,6 +124,7 @@
 \setlength{\separatorcolumnwidth}{0.025\textwidth}%
 \newlength{\maincolumnwidth}
 \newlength{\doubleitemcolumnwidth}
+\newlength{\tripleitemcolumnwidth}
 \newlength{\listitemsymbolwidth}
 \settowidth{\listitemsymbolwidth}{\listitemsymbol}
 \newlength{\listitemmaincolumnwidth}
@@ -139,6 +140,8 @@
   % doubleitem lengths
   \setlength{\doubleitemcolumnwidth}{\maincolumnwidth-\separatorcolumnwidth}%
   \setlength{\doubleitemcolumnwidth}{0.5\doubleitemcolumnwidth}%
+  \setlength{\tripleitemcolumnwidth}{\maincolumnwidth-\separatorcolumnwidth}%
+  \setlength{\tripleitemcolumnwidth}{0.33333\tripleitemcolumnwidth}%
   % listdoubleitem lengths
   \setlength{\listdoubleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
   \setlength{\listdoubleitemmaincolumnwidth}{0.5\listdoubleitemmaincolumnwidth}%
@@ -181,6 +184,15 @@
   \begin{minipage}[t]{\doubleitemcolumnwidth}\hintstyle{#2}: #3\end{minipage}%
   \hfill% fill of \separatorcolumnwidth
   \begin{minipage}[t]{\doubleitemcolumnwidth}\ifthenelse{\isempty{#4}}{}{\hintstyle{#4}: }#5\end{minipage}%
+  \par\addvspace{#1}}
+  
+\renewcommand*{\cvtripleitem}[7][.25em]{%
+  \begin{minipage}[t]{\tripleitemcolumnwidth}\hintstyle{#2}: #3\end{minipage}%
+  \hfill% fill of \separatorcolumnwidth
+  \begin{minipage}[t]{\tripleitemcolumnwidth}\ifthenelse{\isempty{#4}}{}{\hintstyle{#4}: }#5\end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{\tripleitemcolumnwidth}\hintstyle{#6}: #7\end{minipage}%
+  \hfill% fill of \separatorcolumnwidth
   \par\addvspace{#1}}
 
 \renewcommand*{\cvlistitem}[2][.25em]{%

@@ -5,13 +5,20 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[10pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\fancyfoot[CO]{\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+\color{color2}\scriptsize{Professional references available by request.} & \color{color2}\scriptsize{\today}
+\end{tabular*}}
+
+% Tech toggles
+\displayembedded
 
 % character encoding
 \usepackage[utf8]{inputenc}
@@ -32,7 +39,7 @@
 \homepage{careers.stackoverflow.com/ArthurChamz}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+%\quote{The old words when short are best of all.}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -51,38 +58,56 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{Education}
-\cventry{2009--2013}{BSc Computer Science: Software Engineering}{Universidad Aut\'onoma de Nuevo Le\'on, Facultad de Ciencias F\'isico Matem\'aticas}{}{\textit{90 out of 100}}{Description}  % arguments 3 to 6 can be left empty
+%\section{Statement}
+Software Engineer with an honorable, honest and ethical attitude and a relentless passion for learning and crafting, striving to acquire more experience.
 
-\section{Professional Experience}
-\cventry{Nov 2013--Present}{Software Engineer}{AMI GE International \textit{[amige.com]}}{Monterrey, M\'exico}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
+My professional objective is to commit to an organization as a system, consolidating and promoting its vision, mission and values, relentlessly pursuing both personal and professional growth.%
+
+I'm a gritty free thinker with the belief that education, discipline and hard work will contribute to social prosperity and sustainability.
+
+\section{Experience}
+\cventry{Nov 2013--Present}{Software Engineer}{AMI GE - \href{http://www.amige.com}{amige.com}}{Monterrey, M\'exico}{}{Embedded real time system research and development.\newline{}%
 \begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
+\item Digitarc PX3 Electrode Regulator, an industrial grade C\texttt{++} solution.
   \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-  \item Sub-achievement (c);
+  \item Researched, planned, implemented and tested voltage flicker measurement feature.
+  \item Applied specific refactoring to design patterns of signals metering module, reducing its complexity.
   \end{itemize}
-\item Achievement 3.
+%\item \underline{Most valued lesson}: Tackle projects with a method, care and enthusiasm; no need for pointless premature conjectures.
 \end{itemize}}
-\cventry{Jan 2013--Oct 2013}{Software Analyst Intern}{Centro de Servicios TI FEMSA \textit{[femsa.com/en]}}{Monterrey, M\'exico}{}{Description line 1\newline{}Description line 2}
-\cventry{Jan 2013--Jul 2013}{Software Developer (Social Service Provider)}{Centro de Servicios en Inform\'atica \textit{[uanl.mx]}}{San Nicol\'as de los Garza, M\'exico}{}{Description}
-
-\section{Languages}
-\cvdoubleitem{Spanish}{Native Language}{English}{Professional}
-\cvitem{French}{Intermediate}
-%\cvitemwithcomment{French}{Intermediate}{Comment}
+\cventry{Jan 2013--Oct 2013}{Software Engineer Intern}{FEMSA - \href{http://www.femsa.com/en}{femsa.com}}{Monterrey, M\'exico}{}{Enterprise application planning, design, development and support.\newline{}%
+\begin{itemize}%
+\item End-user, face to face requirements gathering, analysis and support.
+\item Supported legacy ASP Classic online application.
+\item Developed .NET enterprise solution.
+  \begin{itemize}%
+  \item Migrated from Access to WISA, and then to LAPP stack, with Mono and PostgreSQL.
+  \item Installed and configured Ubuntu Server virtual machine: SSH client authentication program (C\texttt{++}), http, database.
+  \end{itemize}
+\item Developed module for Exchange e-mail server messages retrieval, data parsing and storage (Exchange Web Services).
+%\item \underline{Most valued lesson}: Collaborating with end-users, so that they trust the product. The objective is to help people.
+\end{itemize}}
+\cventry{Jan 2013--Jul 2013}{Software Developer (Social Service Provider)}{Centro de Servicios en Inform\'atica - \href{http://www.uanl.mx}{uanl.mx}}{San Nicol\'as de los Garza, M\'exico}{}{Administrative application development.\newline{}
+\begin{itemize}%
+\item Contributed to school's website interface and content design (fcfm.uanl.mx).
+\item Contributed to the development of modules for course registration application.
+%\item \underline{Most valued lesson}: Investing time in learning new things leads to progress.
+\end{itemize}}
 
 \section{Skills}
 %\subsection{Programming Languages}
-\cvitem{Programming}{C, C\texttt{++}, C\texttt{\#} \includegraphics{net}, Java \includegraphics{java}, Python \includegraphics{python}, Ruby \includegraphics{ruby}, Perl \includegraphics{perl}, VBasic, Javascript \includegraphics{js}, HTML \includegraphics{html}, CSS, XML.}
-\cvitem{Databases}{Relational design, modeling and operation (PostgreSQL \includegraphics{psql}, SQL Server \includegraphics{tsql}, MySQL \includegraphics{mysql}).}
-\cvitem{Platforms}{Linux \includegraphics{ubuntu}, Windows \includegraphics{win}, QNX \includegraphics{qnx}.}
-\cvitem{Tools}{IPython, Visual Studio, Eclipse, SQL Management Studio, Emacs, VIM, SVN, git, VirtualBox, \LaTeX{}.}
-\section{Aptitudes}
-Speech proficiency, learning desire, service attitude, proactive, self-learner, honor and ethics.
+\cvitem{Programming}{C, C\texttt{++}, \cvskill[net]{C\texttt{\#}}, \cvskill[java]{Java}, \cvskill[python]{Python}, \cvskill[ruby]{Ruby}, \cvskill[perl]{Perl}, VB, Javascript, \cvskill[html]{HTML}, XML.}
+\cvitem{Database modeling and operation}{\cvskill[psql]{PostgreSQL}, \cvskill[tsql]{SQL Server}, \cvskill[mysql]{MySQL}.}
+\cvitem{Platforms}{\cvskill[ubuntu]{Linux}, \cvskill[win]{Windows}, QNX.}
+\cvitem{Tools}{IPython, Visual Studio, Eclipse, Emacs, VIM, SVN, git, VirtualBox, \LaTeX{}.}
+
+\section{Education}
+\cventry{2009--2013}{BSc Computer Science: Software Engineering}{Universidad Aut\'onoma de Nuevo Le\'on, Facultad de Ciencias F\'isico Matem\'aticas}{}{\textit{90 out of 100}}{}  % arguments 3 to 6 can be left empty
+
+\section{Languages}
+\cvtripleitem{Spanish}{Native.}{English}{Professional.}{French}{Intermediate.}
+
+\end{document}
 
 %\cvitem{hobby 1}{Description}
 
@@ -105,12 +130,8 @@ Speech proficiency, learning desire, service attitude, proactive, self-learner, 
 %\nocitemisc{misc1,misc2,misc3}
 %\bibliographystylemisc{plain}
 %\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-    
-\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
-\scriptsize{Personal and professional references available by request.} & \scriptsize{\today}
-\end{tabular*}
 
-\end{document}
+
 
 
 %% end of file `template.tex'.

@@ -152,7 +152,8 @@
           \newlength{\pagenumberwidth}%
           \settowidth{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}%
           \fancypagestyle{plain}{%
-            \fancyfoot[r]{\parbox[b]{\pagenumberwidth}{\color{color2}\pagenumberfont\strut\thepage/\pageref{lastpage}}}}% the parbox is required to ensure alignment with a possible center footer (e.g., as in the casual style)
+            \fancyfoot[r]{\parbox[b]{\pagenumberwidth}{\color{color2}\scriptsize{\today}}}}
+            %\fancyfoot[r]{\parbox[b]{\pagenumberwidth}{\color{color2}\pagenumberfont\strut\thepage/\pageref{lastpage}}}}% the parbox is required to ensure alignment with a possible center footer (e.g., as in the casual style)
           \pagestyle{plain}}{}}%
       \AtEndDocument{\label{lastpage}}\else\fi}}
 \pagestyle{plain}
@@ -366,6 +367,7 @@
 % makes a resume line 2 headers and their corresponding text
 % usage: \cvdoubleitem[spacing]{header1}{text1}{header2}{text2}
 \newcommand*{\cvdoubleitem}[5][.25em]{}
+\newcommand*{\cvtripleitem}[7][.25em]{}
 
 % makes a resume line with a list item
 % usage: \cvlistitem[label]{item}
@@ -576,8 +578,21 @@
 \newcommand*{\makeletterclosing}{}
 
 % insert new skill
-% usage: \newskill
+% usage: \cvskill
 % TODO: CREATE THE COMMAND WITH OPTIONAL PARAM
+\newcommand*{\cvskill}[2][{}]{%
+  %\ifthenelse{#3}
+  %{
+    \ifthenelse{\isempty{#1}}%
+      {#2}%
+      {#2 \includegraphics{#1}}%
+  %}
+}%
+
+\newif\if@embedded\@embeddedfalse
+\newcommand*{\displayembedded}{\@embeddedtrue}
+
+\definecolor{brick}{rgb}{0.55, 0.1, 0.1}
 
 \endinput
 
