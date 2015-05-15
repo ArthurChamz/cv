@@ -14,7 +14,7 @@
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 \fancyfoot[CO]{\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
-\color{color2}\scriptsize{Professional references available by request.} & \color{color2}\scriptsize{\today}
+\color{color2}\scriptsize{} & \color{color2}\scriptsize{\today}
 \end{tabular*}}
 
 % Tech toggles
@@ -24,15 +24,15 @@
 \usepackage[utf8]{inputenc}
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Arturo Isa\'i}{Castro P\'erpuli}
-\title{Software Engineer}                               % optional, remove / comment the line if not wanted
-\address{Bet-el \#700}{66430}{San Nicol\'as de los Garza, Nuevo Le\'on, M\'exico}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+52~(81)~1610~3081}                   % optional, remove / comment the line if not wanted
+%\title{Software Engineer}                               % optional, remove / comment the line if not wanted
+\address{66 Grafton Street}{M13 9NT}{Manchester, UK}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{\texttt{+}44~07931~072503}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{arturo.castrop@live.com}                               % optional, remove / comment the line if not wanted
@@ -58,54 +58,121 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+%\section{Summary}
 %\section{Statement}
-Software Engineer with an honorable, honest and ethical attitude and a relentless passion for learning and crafting, striving to acquire more experience.
-
-My professional objective is to commit to an organization as a system, consolidating and promoting its vision, mission and values, relentlessly pursuing both personal and professional growth.%
-
-I'm a gritty free thinker with the belief that education, discipline and hard work will contribute to social prosperity and sustainability.
+Persevering and responsible Software Engineer that enjoys working with a \textbf{systematic, methodical and agile approach} to constructing quality solutions with real \textbf{full-stack experience}, with deep knowledge in data science, optimisation and problem solving.
+\\
+%\textbf{Goal}\\
+%Commit to an organization, consolidating and promoting its vision, mission and values, relentlessly pursuing both personal and professional growth.\\
+\cvitem{Nationality}{Mexican}
 
 \section{Experience}
-\cventry{Nov 2013--Present}{Software Engineer}{AMI GE - \href{http://www.amige.com}{amige.com}}{Monterrey, M\'exico}{}{Embedded real time system research and development.\newline{}%
+
+\cventry{Nov 2013--Sep 2014}{Software Engineer}{AMI GE -  \href{http://www.amige.com}{amige.com}}{Monterrey, M\'exico}{\textbf{Embedded real time system} research and development.}{AMI is a GE branch, an international industrial automation and electrical drive systems company (\textasciitilde{}600 employees).\newline{}%
 \begin{itemize}%
-\item Digitarc PX3 Electrode Regulator, an industrial grade C\texttt{++} solution.
+\item Digitarc PX3 Electrode Regulator, a real-time industrial grade \textbf{C\texttt{++}} solution for electrical regulation and monitoring of steel furnaces, with web and desktop clients.
   \begin{itemize}%
-  \item Researched, planned, implemented and tested voltage flicker measurement feature.
-  \item Applied specific refactoring to design patterns of signals metering module, reducing its complexity.
+  \item Researched, planned, implemented and tested voltage flicker measurement feature, providing accurate metrics for security and business in accordance to \textbf{IEEE standards} with no negative impact on performance.
+  \\
+  \item Implemented digital signal processing, numeric analysis and statistical routines for processing voltage and current signals and obtaining information from them.
+  \\
+  \item Quickly wrote and tested low-level driver for an I/O signal handling board to meet estimated sales.
+  \\
+  \item Implemented parallel data acquisition module by creating \textbf{multi-threaded routines}, enhancing data resolution and allowing a more detailed analysis of signals, which increases security and protection of business while maintaining real-time performance.
+  \\
+  \item Applied refactoring to code by using design patterns and adding tests, reducing complexity and code size of critical modules, allowing for less training time devoted to new recruits and making changes simpler.
   \end{itemize}
-%\item \underline{Most valued lesson}: Tackle projects with a method, care and enthusiasm; no need for pointless premature conjectures.
 \end{itemize}}
-\cventry{Jan 2013--Oct 2013}{Software Engineer Intern}{FEMSA - \href{http://www.femsa.com/en}{femsa.com}}{Monterrey, M\'exico}{}{Enterprise application planning, design, development and support.\newline{}%
+
+\hfill \break
+
+\cventry{Jan 2013--Oct 2013}{Software Analyst Intern}{FEMSA - \href{http://www.femsa.com/en}{femsa.com}}{Monterrey, M\'exico}{Enterprise application planning, design, development and support.}{FEMSA is the largest beverage company in Latin America, and the second largest Coca\texttt{-}Cola bottler in the world (\texttt{+}100,000 employees). \newline{}%
 \begin{itemize}%
+\item Developed complete .NET web enterprise solution.
+  \begin{itemize}%
+  \item User input, data analysis and reporting.\\
+  \item Accelerated core feature releases and bug fixes by migrating from Microsoft Access to WISA, and then to LAPP stack (Mono and PostgreSQL).
+  \\
+  \item Database design, modeling and operation.
+  \\
+  \item System administration (network configuration, software packages).
+  \\
+  \item Increased department security by installing and configuring Linux virtual machine: SSH client authentication program (C\texttt{++}), http, database.
+  \end{itemize}
+  \\
+\item Developed module for Exchange e-mail server messages retrieval, data parsing and storage, with automatic daily reports sent by email.
 \item End-user, face to face requirements gathering, analysis and support.
-\item Supported legacy ASP Classic online application.
-\item Developed .NET enterprise solution.
-  \begin{itemize}%
-  \item Migrated from Access to WISA, and then to LAPP stack, with Mono and PostgreSQL.
-  \item Installed and configured Ubuntu Server virtual machine: SSH client authentication program (C\texttt{++}), http, database.
-  \end{itemize}
-\item Developed module for Exchange e-mail server messages retrieval, data parsing and storage (Exchange Web Services).
-%\item \underline{Most valued lesson}: Collaborating with end-users, so that they trust the product. The objective is to help people.
 \end{itemize}}
-\cventry{Jan 2013--Jul 2013}{Software Developer (Social Service Provider)}{Centro de Servicios en Inform\'atica - \href{http://www.uanl.mx}{uanl.mx}}{San Nicol\'as de los Garza, M\'exico}{}{Administrative application development.\newline{}
+
+\hfill \break
+
+\cventry{Jan 2013--Jul 2013}{Software Developer}{Centro de Servicios en Inform\'atica - \href{http://www.uanl.mx}{uanl.mx}}{San Nicol\'as de los Garza, M\'exico}{Application development.}{A business unit from the Autonomous University of Nuevo Lo\'on, dedicated to software engineering projects for internal and external clients (\textasciitilde{}100 employees).\newline{}
 \begin{itemize}%
 \item Contributed to school's website interface and content design (fcfm.uanl.mx).
-\item Contributed to the development of modules for course registration application.
-%\item \underline{Most valued lesson}: Investing time in learning new things leads to progress.
+\item Contributed to the development of modules for course registration application (Java).
 \end{itemize}}
+
+\hfill \break
+
+\cventry{Sept 2014--\textbf{Present}}{Hornet Representative, First level technical support.}{University of Manchester - \href{http://hornet.manchester.ac.uk/}{manchester.ac.uk}}{Manchester, United Kingdom}{}{\newline{}
+}
+The University of Manchester employs students to assist in networking support procedures (connectivity problems, computer troubleshooting). It's Tier 1 support for the \textbf{campus network} and end user counseling.
+
+\section{Education}
+\cventry{2014--2015 (expected)}{MSc Advanced Computer Science: Artificial Intelligence}{School of Computer Science, University of Manchester}{}{First class honours (expected)}{Government-sponsored student learning about \textbf{data science}, parallel architectures, automated reasoning and optimisation.\newline{}
+\begin{itemize}%
+\item \textit{MSc project}: researching portable performance for heterogeneous architectures (C, OpenMP, OpenCL, GPGPU, Xeon Phi).
+\item Implemented a Random Forest model for machine learning classification problems (MATLAB, Python SciKit).
+\item Developed a parallel version of Kruskal's Minimum Spanning Tree algorithm for graph and network flow problems.
+\item Created a parallel version of SOR relaxation algorithm for solving linear equation systems (Fortran, OpenMP and MPI).
+\end{itemize}
+}
+
+\hfill \break
+
+\cventry{2009--2013}{BSc Computer Science: Software Engineering}{Universidad Aut\'onoma de Nuevo Le\'on, Facultad de Ciencias F\'isico Matem\'aticas}{}{\textit{90 out of 100 (First class honours equivalence)}}{Academic merit awards and scholarship, ACM contestant.\newline{}
+\begin{itemize}%
+\item Implemented a simulation of a steel furnace automation process using a real-time operative system (C).
+\end{itemize}
+}  % arguments 3 to 6 can be left empty
+
+\hfill \break
+
+\cventry{Since 2013}{Computer Science}{Udacity}{}{}{Online open courses from various universities and companies.
+\begin{itemize}%
+\item Parallel Computing: Patterns, considerations, nvidia GPUs, CUDA (In progress).
+\item Software Debugging: Scientific approach, techniques, delta debugging (Completion certificate).
+\end{itemize}
+}
+
+\hfill \break
 
 \section{Skills}
 %\subsection{Programming Languages}
-\cvitem{Programming}{C, C\texttt{++}, \cvskill[net]{C\texttt{\#}}, \cvskill[java]{Java}, \cvskill[python]{Python}, \cvskill[ruby]{Ruby}, \cvskill[perl]{Perl}, VB, Javascript, \cvskill[html]{HTML}, XML.}
-\cvitem{Database modeling and operation}{\cvskill[psql]{PostgreSQL}, \cvskill[tsql]{SQL Server}, \cvskill[mysql]{MySQL}.}
+\cvitem{Programming}{\underline{Fluent} in C and C\texttt{++}. \underline{Proficient} in \cvskill[net]{C\texttt{\#}}, \cvskill[java]{Java}, \cvskill[python]{Python} and Javascript (including \cvskill[html]{HTML} and XML). \underline{Some knowledge} of \cvskill[ruby]{Ruby} and R.}
+\cvitem{Parallelism}{\underline{Proficient} in OpenMP. \underline{Good knowledge} of MPI, CUDA and OpenCL.}
+\cvitem{Database modeling and operation}{\underline{Proficient} in \cvskill[psql]{PostgreSQL}. \underline{Some knowledge} of \cvskill[mysql]{MySQL} and \cvskill[tsql]{SQL Server}.}
 \cvitem{Platforms}{\cvskill[ubuntu]{Linux}, \cvskill[win]{Windows}, QNX.}
-\cvitem{Tools}{IPython, Visual Studio, Eclipse, Emacs, VIM, SVN, git, VirtualBox, \LaTeX{}.}
+\cvitem{Tools}{MATLAB (machine learning and digital signal processing), IPython, Python machine learning (SckiKit Learn), Visual Studio, Eclipse, Emacs, VIM, SVN, git, VirtualBox, \LaTeX{}.}
+\cvitem{Knowledge and experience}{Parallel technologies, optimization, machine learning, dimension reduction,  algorithms, data structures, data analysis, agile methodologies, networking.}
 
-\section{Education}
-\cventry{2009--2013}{BSc Computer Science: Software Engineering}{Universidad Aut\'onoma de Nuevo Le\'on, Facultad de Ciencias F\'isico Matem\'aticas}{}{\textit{90 out of 100}}{}  % arguments 3 to 6 can be left empty
+\hfill \break
+
+%\section{Interests}
+%Data science, optimisation, high-performance computing, compilers, %\textbf{open source software}, video games, science and technology.
+
+%\hfill \break
 
 \section{Languages}
-\cvtripleitem{Spanish}{Native.}{English}{Professional.}{French}{Intermediate.}
+\cvtripleitem{Spanish}{Native.}{English}{Professional.}{French}{Working proficiency.}
+
+\hfill \break
+
+\section{References}
+\textbf{Eric Garza:} \ \ \ \ \ \ \ \ \ R\&D Manager at AMI GE \ \ (mx.linkedin.com/pub/eric-garza/2/b0a/2)\\
+\textbf{Fitzgerald Lopez:} Project Manager at FEMSA (mx.linkedin.com/in/fitzlopez)\\
+
+\hfill \break
 
 \end{document}
 
